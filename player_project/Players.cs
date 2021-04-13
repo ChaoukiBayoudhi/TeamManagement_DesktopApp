@@ -18,5 +18,40 @@ namespace player_project
             LstPlayers.Add(p);
             return true;
         }
+        public List<int> getAllIds()
+        {
+            List<int> lstIds = new List<int>();
+            //foreach (var x in LstPlayers)
+            //{
+            //    lstIds.Add(x.Id);
+
+            //}
+            //or
+            for (int i = 0; i < LstPlayers.Count; i++)
+            {
+                lstIds.Add(LstPlayers[i].Id);
+            }
+            return lstIds;
+
+        }
+        public Player FindPlayerById(int id)
+        {
+            Player p1 = new Player();
+            p1.Id = id;
+            int index = LstPlayers.IndexOf(p1);
+            if (index == -1)//le palyer n'existe pas
+                return null;
+            return LstPlayers[index];
+        }
+        public bool RemovePlayer(int id) 
+        {
+            Player p1 = new Player();
+            p1.Id = id;
+            int index = LstPlayers.IndexOf(p1);
+            if (index == -1)//le palyer n'existe pas
+                return false;
+            LstPlayers.RemoveAt(index);
+            return true;
+        }
     }
 }

@@ -30,6 +30,7 @@ namespace player_project
         private void InitializeComponent()
         {
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.cmb_Id = new System.Windows.Forms.ComboBox();
             this.rdb_safe = new System.Windows.Forms.RadioButton();
             this.rdb_injured = new System.Windows.Forms.RadioButton();
             this.cmb_position = new System.Windows.Forms.ComboBox();
@@ -43,7 +44,6 @@ namespace player_project
             this.lab_title = new System.Windows.Forms.Label();
             this.bt_Close = new System.Windows.Forms.Button();
             this.bt_Delete_ModifyPlayer = new System.Windows.Forms.Button();
-            this.cmb_Id = new System.Windows.Forms.ComboBox();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -67,6 +67,16 @@ namespace player_project
             this.groupBox1.TabIndex = 12;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Player Informations";
+            // 
+            // cmb_Id
+            // 
+            this.cmb_Id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.cmb_Id.FormattingEnabled = true;
+            this.cmb_Id.Location = new System.Drawing.Point(137, 29);
+            this.cmb_Id.Name = "cmb_Id";
+            this.cmb_Id.Size = new System.Drawing.Size(182, 26);
+            this.cmb_Id.TabIndex = 6;
+            this.cmb_Id.SelectedIndexChanged += new System.EventHandler(this.cmb_Id_SelectedIndexChanged);
             // 
             // rdb_safe
             // 
@@ -194,15 +204,7 @@ namespace player_project
             this.bt_Delete_ModifyPlayer.TabIndex = 10;
             this.bt_Delete_ModifyPlayer.Text = "Modify Player";
             this.bt_Delete_ModifyPlayer.UseVisualStyleBackColor = true;
-            // 
-            // cmb_Id
-            // 
-            this.cmb_Id.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.cmb_Id.FormattingEnabled = true;
-            this.cmb_Id.Location = new System.Drawing.Point(137, 29);
-            this.cmb_Id.Name = "cmb_Id";
-            this.cmb_Id.Size = new System.Drawing.Size(182, 26);
-            this.cmb_Id.TabIndex = 6;
+            this.bt_Delete_ModifyPlayer.Click += new System.EventHandler(this.bt_Delete_ModifyPlayer_Click);
             // 
             // DeleteModifyPlayerForm
             // 
